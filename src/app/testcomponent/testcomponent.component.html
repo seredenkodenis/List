@@ -1,0 +1,27 @@
+<div class="title">
+  <h1>To-Do list</h1>
+  <h4 style="!important;font-family: 'Helvetica Neue';">Wrote on Angular</h4>
+</div>
+<div *ngIf="showt==true">
+  <p>This is the simplest example of using an angular. All data is stored in Local Storage.<br>
+    This application was written on 10/12/2019<br>
+    My GitHub: <a href="https://github.com/seredenkodenis">https://github.com/seredenkodenis</a>
+  </p>
+</div>
+<div class="center-block">
+  <button (click)="deleteAll()" class="btn btn-danger delA">Delete all</button>
+  <button class="btn btn-success btnInfo" (click)="show()">Information</button>
+  <div class="list">
+  <p  *ngFor="let name of names; let i = index">{{i+1}}) {{name}}
+    <button class="btn btn-danger delete" (click)="delete(i)">Delete</button>
+  </p>
+</div>
+
+
+
+
+<br>
+<input class=" inp" type="text" [(ngModel)]="inputText">
+<button type="submit" class="btn btn-primary add" (click)="addTo()">Add note</button>
+
+</div>
